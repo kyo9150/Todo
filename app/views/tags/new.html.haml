@@ -1,0 +1,3 @@
+= form_with model: @group, local: true do |f|
+  = f.text_field :name, class: "SettingTagForm__input", placeholder: "タグ名を入力してください"
+  = f.submit "Save", class: "SettingTagForm__button"

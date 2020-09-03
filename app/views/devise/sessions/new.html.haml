@@ -1,0 +1,21 @@
+.AccountPage
+  .AccountPage__title
+    %h2.rogin ログイン
+    
+    
+  .AccountPage__form
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .FormField
+        .FormField__label--normal
+          = f.label :email,"メールアドレス"
+        .FormField__input--normal
+          = f.email_field :email,placeholder:"メールアドレス"
+      .FormField
+        .FormField__label--normal
+          = f.label :password,"パスワード"
+        .FormField__input--normal
+          = f.password_field :password,placeholder:"パスワード(英数字8文字以上)", autocomplete: "off"
+      .actions
+        = render "devise/shared/links"
+        = f.submit "ログイン", class: 'button2 UserButton rogin-btn '
+        
