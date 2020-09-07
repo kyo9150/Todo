@@ -1,0 +1,140 @@
+.Main{
+  height: 100%;
+  width: 100vw;
+  
+  .Main-header{
+    height: 100px;
+    width: 100%;
+    background-color: #40E0D0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__Name{
+      display: flex;
+      align-items: center;
+      .AppName{
+        color: white;
+        font-size: 50px;
+        font-weight: 900;
+        text-decoration: none;
+        border: 0;
+        margin-left: 50px;
+      }
+    
+
+    }
+    &__Box{
+      display: flex;
+      align-items: center;
+      .UserName{
+        a{
+          text-decoration: none;
+          color: #666666;
+          font-size: 20px;
+        }
+      }
+      .Edit{
+        margin: 0 50px 0;
+        font-size: 40px;
+        a{
+          color: white;
+          &:hover{
+            color: #EEEEEE;
+          }
+        }
+      }
+    }
+  }
+  
+
+
+  .Main-contents{
+    height: 50px;
+    width: 100vw;
+    background-color:white;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+
+    .Tags{
+      height: 50px;
+      width: 96vw;
+      display: flex;
+      margin-left: 10px;
+      align-items: center;
+      overflow-x: auto;
+      white-space: nowrap;
+      
+      .tag{
+        border: 0;
+        padding: 13px 12px 10px 0;
+        position: relative;
+        color: white;
+        display: inline-block;
+        .tag-new{
+          text-decoration: none;
+          color: #555555;
+          font-size: 17px;
+          //font-weight: 100;
+          border: 0px;
+          padding: 13px 5px 10px 12px;
+        }
+        &:hover{
+          border-bottom: 2px solid	#3CB371;
+          border-style: ridge;
+          .delete{
+            font-size: 15px;
+            color: #777777;
+            &:hover{
+              color: #AAAAAA;
+            }
+          }
+  
+        }
+        
+      }
+      
+    }
+
+  }
+  
+}
+#border div{
+  left: 0%;
+  width: 33.3333%;
+  bottom: 0;
+  display: block;
+  background-color: #888;
+  height: 2px;
+  transition: left 1s cubic-bezier(0.23,1,0.32,1);
+}
+
+.tag-icon{
+  color: #666666;
+  position: absolute;
+  right: 30px;
+  top: 110px;
+  font-size: 20px;
+  &:hover{
+    color: #888888;
+  }
+}
+.delete{
+  color: white;
+}
+
+.finish{
+  display: block;
+  text-decoration: none;
+  color: #555555;
+  font-size: 20;
+  font-weight: 100;
+  padding: 15px 5px 5px 10px;
+  height: 50px;
+  width: 50px;
+  border: 0px;
+  &:hover{
+    border-bottom: 2px solid	#3CB371;
+    border-style: ridge;
+  }
+}

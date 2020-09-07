@@ -1,0 +1,27 @@
+.Main
+  .Main-header
+    .Main-header__Name
+      =link_to root_path,class:"AppName" do 
+        %div TO DO
+    .Main-header__Box
+      .UserName
+        = link_to edit_user_path(current_user) do
+          = current_user.name
+      .Edit
+        = link_to "#" do
+          =icon('fas','cog')
+  .Main-contents
+    -# = link_to "#",class:"finish" do
+    -#   %div 完了
+    %ul.Tags
+      - current_user.tags.each do |tag|
+        %li.tag
+          = link_to  tag_tasks_path(tag),class:"tag-new" do
+            = tag.name
+          = link_to tag_path(tag.id) ,method: :delete,class:"delete" do
+            =icon('fas','times')
+    = link_to new_tag_path ,class:"tag-icon" do
+      =icon('fas','plus')
+
+
+%div(class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")

@@ -18,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 
   h2 {
     letter-spacing: 3px;
@@ -111,7 +112,7 @@
   .UserButton {
     //margin-top: 20px;
     color: #fff;
-    background-color: #38aef0;
+    background-color: #48D1CC ;
   }
   
 }
@@ -172,7 +173,7 @@
 }
 .update{
   margin-left: 365px;
-  
+
 }
 .rogin-btn{
   margin-left: 200px;
@@ -189,6 +190,10 @@
   text-decoration: none;
   background-color: #ccc;
   color: white;
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
 }
 .button4{
   display: inline-block;
@@ -203,4 +208,8 @@
   background-color: #ccc;
   color: white;
   margin-left: 230px;
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
 }

@@ -1,3 +1,5 @@
-= form_with model: @group, local: true do |f|
-  = f.text_field :name, class: "SettingTagForm__input", placeholder: "タグ名を入力してください"
-  = f.submit "Save", class: "SettingTagForm__button"
+.form-tag
+  .form-title タグ追加
+  = form_with model: @tag, local: true do |f|
+    = f.text_field :name, class: "form-tag__input", placeholder: "タグ名を入力してください"
+    = f.submit "追加する", class: "form-tag__button"

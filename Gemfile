@@ -58,3 +58,6 @@ gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'devise'
 gem 'pry-rails'
+gem 'rails-i18n', '~> 6.0.0'
+gem "bootstrap-sass", "~>3.3.6"
+gem "jquery-ui-rails"
