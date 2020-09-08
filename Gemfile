@@ -36,6 +36,10 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
@@ -66,6 +70,8 @@ gem 'pry-rails'
 gem 'rails-i18n', '~> 6.0.0'
 gem "bootstrap-sass", "~>3.3.6"
 gem "jquery-ui-rails"
+
 group :production do
   gem 'unicorn', '5.4.1'
 end
+gem 'fog-aws'
