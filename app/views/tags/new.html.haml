@@ -1,5 +1,6 @@
-.form-tag
-  .form-title タグ追加
-  = form_with model: @tag, local: true do |f|
-    = f.text_field :name, class: "form-tag__input", placeholder: "タグ名を入力してください"
-    = f.submit "追加する", class: "form-tag__button"
+.tags-form
+  .tag-form
+    .form-title タグ追加
+    = form_with model: @tag, local: true do |f|
+      = f.text_field :name, class: "tag-form__input", placeholder: "タグ名を入力してください"
+      = f.submit "追加する", class: "tag-form__button"
