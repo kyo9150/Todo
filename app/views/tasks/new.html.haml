@@ -9,7 +9,7 @@
       .date-label
         = f.label :deadline,"期限"
       .task-form__date
-        = f.datetime_field :deadline
+        = f.datetime_select :deadline
       .task-form__button
         -# = f.time_field :deadline
         = f.submit "追加"
