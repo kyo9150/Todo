@@ -15,6 +15,7 @@ module Todo
       g.javascripts false
       g.helper false
       g.test_framework false
+    config.time_zone = 'Asia/Tokyo'
     end
 
     # Settings in config/environments/* take precedence over those specified here.
