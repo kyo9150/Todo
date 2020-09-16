@@ -14,12 +14,13 @@
     -# = link_to "#",class:"finish" do
     -#   %div 完了
     %ul.Tags
-      - current_user.tags.each do |tag|
-        %li.tag
-          = link_to  tag_tasks_path(tag),class:"tag-new" do
-            = tag.name
-          = link_to tag_path(tag.id) ,method: :delete,class:"delete" do
-            =icon('fas','times')
+      - current_user.tags.each do |tags|
+        - if current_user.id == tags.user_id
+          %li.tag
+            = link_to  tag_tasks_path(tags),class:"tag-new" do
+              = tags.name
+            = link_to tag_path(tags.id) ,method: :delete,class:"delete" do
+              =icon('fas','times')
     = link_to new_tag_path ,class:"tag-icon" do
       =icon('fas','plus')
 

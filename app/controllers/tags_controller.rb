@@ -1,5 +1,6 @@
 class TagsController < ApplicationController
   protect_from_forgery :except => [:destroy]
+  before_action :correct_user ,only:[:index]
   def index
   end
 
@@ -29,5 +30,11 @@ class TagsController < ApplicationController
   private
   def tag_params
     params.require(:tag).permit(:name).merge(user_id: current_user.id)
+  end
+  def correct_user
+    @tag = current_user.tags.find_by(id: params[:id])
+      unless @tag
+        redirect_to root_url
+      end
   end
 end
