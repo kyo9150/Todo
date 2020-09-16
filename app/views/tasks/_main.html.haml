@@ -1,6 +1,6 @@
 .Contents
   .Contents__Tasks
-    - current_user.tasks.each do |task|
+    - @tasks.each do |task|
       - if current_user.id == task.user_id
         .list
           .task

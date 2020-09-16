@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
   protect_from_forgery :except => [:destroy]
-  before_action :correct_user ,only:[:index]
+  # before_action :correct_user 
   def index
   end
 
