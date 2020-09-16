@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   protect_from_forgery :except => [:destroy]
   before_action :set_tag
   before_action :set_task,only:[:edit]
+  before_action :correct_user ,only:[:edit,:destroy]
 
 
   def index
@@ -54,4 +55,12 @@ class TasksController < ApplicationController
   def set_task
     @task = Task.find(params[:id])
   end
+  def correct_user
+    @mtask = current_user.tasks.find_by(id: params[:id])
+      unless @task
+        redirect_to root_url
+      end
+  end
 end
+
+

@@ -1,8 +1,7 @@
 .Contents
   .Contents__Tasks
-    -# = render @tasks
     - @tasks.each do |task|
-      -if user_signed_in? && current_user.id==task.user_id
+      - if current_user.id == task.user_id
         .list
           .task
             .task-title 
@@ -20,7 +19,6 @@
             .icon
               = link_to  tag_task_path(task.tag.id,task.id) , method: :delete do
                 = icon('fas','trash-alt')
-      
   .Contents__New-task
     = link_to new_tag_task_path,class:"Newtask" do
       = icon('far','edit')
