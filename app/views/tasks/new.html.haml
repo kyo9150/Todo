@@ -6,6 +6,10 @@
         = f.label :name,"タスク名"
       .task-form__input
         = f.text_field :name, placeholder: "タスクを入力してください"
+      .detail-label
+        = f.label :detail,"詳細"
+      .detail-date
+        = f.text_area :detail
       .date-label
         = f.label :deadline,"期限"
       .task-form__date

@@ -3,22 +3,32 @@
     - @tasks.each do |task|
       - if current_user.id == task.user_id
         .list
-          .task
-            .task-title 
-              = task.name
-            .task-date
-            - if task.deadline.present? 
-              = task.deadline.strftime("%m/%d(#{%w(日 月 火 水 木 金 土)[task.deadline.wday]}) %H:%M")
-          .icons
-            -# .icon
-            -#   = link_to "#" do
-            -#     = icon('fas','check')
-            .icon
-              = link_to  edit_tag_task_path(task.tag.id,task.id),method: :get do
-                = icon('fas','pen')
-            .icon
-              = link_to  tag_task_path(task.tag.id,task.id) , method: :delete do
-                = icon('fas','trash-alt')
+          .main
+            .task
+              .task-title 
+                = task.name
+              .task-date
+              - if task.deadline.present? 
+                = task.deadline.strftime("%m/%d(#{%w(日 月 火 水 木 金 土)[task.deadline.wday]}) %H:%M")
+            .icons
+              -# .icon
+              -#   = link_to "#" do
+              -#     = icon('fas','check')
+              .icon
+                = link_to  edit_tag_task_path(task.tag.id,task.id),method: :get do
+                  = icon('fas','pen')
+              .icon
+                = link_to  tag_task_path(task.tag.id,task.id) , method: :delete do
+                  = icon('fas','trash-alt')
+        -if task.detail.present?
+          .content
+            %ul
+              %li 
+                =task.detail
+            .button 
+              = icon('fas','chevron-down')
+        - else
+          .not-content
   .Contents__New-task
     = link_to new_tag_task_path,class:"Newtask" do
       = icon('far','edit')

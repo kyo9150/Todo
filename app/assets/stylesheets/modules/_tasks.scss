@@ -30,37 +30,68 @@
     height: 500px;
     overflow: auto;
     .list{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #BBBBBB;
-      .task{
-        margin-bottom: 5px;
-        padding: 5px;
-        
-        .task-title{
-          font-size: 25px;
-          color: #333333;
-        }
-        .task-date{
-          font-size: 15px;
-          color: #777777;
-        }
-      }
-      .icons{
+      height: 40px;
+      margin-top: 30px;
+      .main{
         display: flex;
-        .icon{
-          margin-left: 25px;
-          font-size: 30px;
+        justify-content: space-between;
+        align-items: center;
+        .task{
+          // margin-bottom: 5px;
+          padding: 5px;
           
-          a{
-            color: #666666;
-            &:hover{
-              color: #333333;
+          .task-title{
+            font-size: 25px;
+            color: #333333;
+          }
+          .task-date{
+            font-size: 15px;
+            color: #777777;
+          }
+        }
+        .icons{
+          display: flex;
+          .icon{
+            margin-left: 25px;
+            font-size: 30px;
+            
+            a{
+              color: #666666;
+              &:hover{
+                color: #333333;
+              }
             }
           }
         }
       }
+    }
+    .content{
+      text-align: center;
+      width: 800px;
+      border-bottom: 1px solid #BBBBBB;
+      ul{
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        li{
+          width: 200px;
+        };
+      }
+
+      .button{
+        font-size: 30px;
+        text-align: center;
+        width: 800px;
+      }
+      .close{
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+    .not-content{
+      height: 40px;
+      width: 800px;
+      border-bottom: 1px solid #BBBBBB;
     }
   }
   &__New-task{

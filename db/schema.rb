@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_02_124612) do
+ActiveRecord::Schema.define(version: 2020_09_02_224256) do
 
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_tags_on_user_id"
@@ -23,8 +23,9 @@ ActiveRecord::Schema.define(version: 2020_09_02_124612) do
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "deadline"
-    t.bigint "tag_id"
-    t.bigint "user_id"
+    t.text "detail"
+    t.bigint "tag_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["tag_id"], name: "index_tasks_on_tag_id"
@@ -46,5 +47,6 @@ ActiveRecord::Schema.define(version: 2020_09_02_124612) do
   end
 
   add_foreign_key "tags", "users"
+  add_foreign_key "tasks", "tags"
   add_foreign_key "tasks", "users"
 end

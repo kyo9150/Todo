@@ -2,6 +2,7 @@ class TagsController < ApplicationController
   protect_from_forgery :except => [:destroy]
   # before_action :correct_user 
   def index
+    @tags = Tag.where(user_id: current_user.id)
   end
 
   def new

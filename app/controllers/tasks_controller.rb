@@ -5,12 +5,18 @@ class TasksController < ApplicationController
   before_action :correct_user ,only:[:edit,:destroy]
 
 
-  def index
+  def index    
     @tasks = @tag.tasks.includes(:user).order("deadline ASC")
+    @tags = Tag.where(user_id: current_user.id)
   end
   
   def new
-    @task = Task.new
+    # @task=Task.find(params[:tag_id])
+    if current_user.id == @tag.user_id
+      @task = Task.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -46,7 +52,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name,:deadline).merge(user_id: current_user.id)
+    params.require(:task).permit(:name,:deadline,:detail).merge(user_id: current_user.id)
   end
 
   def set_tag
