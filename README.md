@@ -7,8 +7,8 @@
 |e-mail|string|null: false,unique: true|
 |password|string|null: false|
 ### Association
-has_many :tags,dependent: :destroy
-has_many :tasks,dependent: :delete_all
+- has_many :tags,dependent: :destroy
+- has_many :tasks,dependent: :delete_all
 
 ## tagsテーブル
 |Column|Type|Options|
@@ -16,8 +16,8 @@ has_many :tasks,dependent: :delete_all
 |name|string|null: false|
 |user|references|null: false,foreign_key: true|
 ### Association
-has_many :tasks,dependent: :destroy
-belongs_to :user
+- has_many :tasks,dependent: :destroy
+- belongs_to :user
 
 ## tasksテーブル
 |Column|Type|Options|
@@ -28,9 +28,9 @@ belongs_to :user
 |tag|references|null: false, foreign_key: true|
 |user|references|null: false, foreign_key: true|
 ### Association
-belongs_to :tag
-belongs_to :user
-validates :name, presence: true
+- belongs_to :tag
+- belongs_to :user
+- validates :name, presence: true
 
 Things you may want to cover:
 
