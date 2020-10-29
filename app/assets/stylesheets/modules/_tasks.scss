@@ -82,6 +82,10 @@
         font-size: 30px;
         text-align: center;
         width: 800px;
+        color: #333333;
+        &:hover{
+          color: #BBBBBB;
+        }
       }
       .close{
         font-size: 30px;
