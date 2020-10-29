@@ -32,22 +32,12 @@
 - belongs_to :user
 - validates :name, presence: true
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### TODO
+## 概要
+タスク管理アプリ
+## 本番環境
+- URL
+http://54.150.137.103/
+- テスト用アカウント
+メールアドレス：taro@gmail.com
+パスワード：abc123
