@@ -27,7 +27,7 @@
             .content
               %ul
                 %li 
-                  =task.detail
+                  =safe_join(task.detail.split("\n"),tag(:br))
               .button 
                 = icon('fas','chevron-down')
           - else

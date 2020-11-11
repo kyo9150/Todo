@@ -4,7 +4,7 @@
     = form_with model:[@tag,@task], local: true do |f|
       .task-label
         = f.label :name,"タスク名"
-      .task-form__input
+      .task-input
         = f.text_field :name, placeholder: "タスクを入力してください"
       .detail-label
         = f.label :detail,"詳細"
@@ -12,8 +12,8 @@
         = f.text_area :detail
       .date-label
         = f.label :deadline,"期限"
-      .task-form__date
+      .date
         = f.datetime_field :deadline
-      .task-form__button
+      .task-button
         -# = f.time_field :deadline
         = f.submit "Save"
