@@ -1,0 +1,144 @@
+@media screen and (max-width: 640px) {
+  img{
+    max-width: 100%;
+    height: auto;
+    width /***/:auto;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+
+  .tags-form{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tag-form{
+      height: 400px;
+      width: 300px;
+      margin-bottom: 10%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border: 1px solid white;
+      padding: 45px;
+      .form-title{
+        font-size: 40px;
+        color: #555555;
+        margin-bottom: 25px;
+      }
+  
+      &__input{
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 1px solid #DDDDDD;
+        padding-left: 10px;
+      }
+      &__button{
+        width: 270px;
+        height: 45px;
+        display: block;
+        margin: 20px 0 0 15px;
+        background-color:#48D1CC ;
+        border-style: none;
+        border-radius: 3px;
+        color: white;
+      }
+    }
+  }
+
+
+
+
+
+  .tasks-form{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .task-form{
+      height: 500px;
+      width: 350px;
+      margin-bottom: 10%;
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-left: 50px;
+      .form-title{
+        font-size: 40px;
+        color:#555555;
+      }
+      form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .task-input{
+          input{
+            width: 300px;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 1px solid #DDDDDD;
+            padding-left: 10px;
+          }
+          margin-bottom: 10px;
+        }
+        .detail-label{
+          color: #777777;
+          margin-right: 255px;
+        }
+        .detail-date{
+          textarea{
+            border-radius: 5px;
+            border: 1px solid #DDDDDD;
+            width: 300px;
+            height: 100px;
+            padding: 5px;
+          }
+        }
+        .date{
+          input{
+            width:300px;
+            height: 30px;
+            // display: block;
+            border: 1px solid #DDDDDD;
+            border-radius: 3px;
+            padding: 0 10px 0;
+          }
+        }
+        .task-button{
+          input{
+            width: 270px;
+            height: 45px;
+            margin: 20px 0 0 0;
+            background-color:#48D1CC ;
+            border-style: none;
+            border-radius: 3px;
+            color: white;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  
+  .task-label{
+    color: #777777;
+    margin-right: 230px;
+  }
+  .date-label{
+    color: #777777;
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10px;
+  }
+
+
+}

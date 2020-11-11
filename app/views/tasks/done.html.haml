@@ -1,10 +1,9 @@
-.Contents
-  .Contents__Tasks
-    - @tasks.each do |task|
-      - if current_user.id == task.user_id
-        - if task.completed.present?
-          .not-main
-        - else 
+.wrapper
+  = render "tags/bar" 
+  .Contents
+    .Contents__Tasks
+      - @done.each do |task|
+        - if current_user.id == task.user_id
           .list
             .main
               .task
@@ -32,6 +31,3 @@
                 = icon('fas','chevron-down')
           - else
             .not-content
-  .Contents__New-task
-    = link_to new_tag_task_path,class:"Newtask" do
-      = icon('far','edit')

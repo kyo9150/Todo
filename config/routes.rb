@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   root "tags#index"
   resources :users, only: [:edit, :update]
   resources :tags, only: [:index,:new, :show,:create,:destroy] do
-    resources :tasks
+    resources :tasks do
+      member do
+        put "finish"
+      end
+    end
   end
-  post '/tasks/:id/done' => 'tasks#done',   as: 'done'
+  get  "tasks/done"  => "tasks#done"
+  get  "tasks/doing"  => "tasks#doing"
 end

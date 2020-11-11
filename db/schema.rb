@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_26_105353) do
+ActiveRecord::Schema.define(version: 2020_11_07_050928) do
 
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_26_105353) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "tag_id"
+    t.integer "completed"
     t.index ["tag_id"], name: "index_tasks_on_tag_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end

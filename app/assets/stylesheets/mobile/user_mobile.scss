@@ -1,0 +1,244 @@
+@media screen and (max-width: 640px) {
+  img{
+    max-width: 100%;
+    height: auto;
+    width /***/:auto;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+
+
+  .AccountPage {
+    width: 350px;
+    margin: 60px auto;
+    padding: 60px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .AccountPage__title {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .rogin{
+      margin-right: 300px;
+      width: 200px;
+      font-size: 40px;
+    }
+    .create{
+      margin-right: 250px;
+      width: 300px;
+      font-size: 35px;
+    }
+    h2 {
+      letter-spacing: 3px;
+      font-size: 25px;
+      margin-bottom: 50px;
+      &:after {
+        content: "";
+        display: block;
+        width: 60px;
+        margin-top: 5px;
+      }
+    }
+
+    .Button {
+      // margin-left: 200px;
+    //   color: #fff;
+    //   background-color: #ccc;
+    }
+  }
+
+  .AccountPage__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // padding-left: 400px;
+  }
+  form{
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    .FormField {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      &__label--normal {
+        padding: 10px 0;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-weight: 200;
+        i {
+          font-size: 11px;
+        }
+        .field_with_errors {
+          display: inline-block;
+          color: #d65f4c;
+          font-weight: 400;
+        }
+      }
+      &__input--normal {
+        input {
+          box-sizing: border-box;
+          width: 330px;
+          padding: 10px;
+          letter-spacing: 1px;
+        }
+        .field_with_errors {
+          //position: relative;
+
+          &:after {
+            content: "";
+            display: block;
+            // position: absolute;
+            // top: 0;
+            // right: 0;
+            // bottom: 0;
+            // width: 5px;
+            background-color: #d65f4c;
+          }
+        }
+      }
+    }
+    .actions{
+      width: 330px;
+      display: flex;
+      justify-content: space-between;
+      .Button {
+        //margin-right: 140px;
+        color: #fff;
+        background-color: #ccc;
+        //font-weight: 200;
+        border: none;
+        border-radius: 2px;
+        padding: 13px 15px 0;
+        text-decoration: none;
+        height: 50px;
+      }
+      .button1 {
+        display: inline-block;
+        height: 50px;
+        padding: 0 30px;
+        line-height: 50px;
+        letter-spacing: 1px;
+        text-align: center;
+        border: none;
+        border-radius: 2px;
+        text-decoration: none;
+
+        //@error: 335px;
+      }
+      .UserButton {
+        //margin-top: 20px;
+        color: #fff;
+        background-color: #48D1CC ;
+        margin: 0;
+      }
+      
+    }
+  }
+  .Button {
+    //margin-right: 140px;
+    color: #fff;
+    background-color: #ccc;
+    //font-weight: 200;
+    border: none;
+    border-radius: 2px;
+    padding: 13px 20px 0;
+    text-decoration: none;
+    height: 50px;
+  }
+  .button2 {
+    // display: inline-block;
+    height: 50px;
+    padding: 0 30px;
+    // line-height: 50px;
+    // letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    // margin-right: 600px;
+    
+
+    //@error: 335px;
+  }
+  #error_explanation {
+    margin: 20px 0;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+
+    h2 {
+      margin-bottom: 10px;
+      color: #d65f4c;
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 17px;
+      list-style: square;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+    }
+  }
+  .update{
+
+  }
+  .rogin-btn{
+    margin-left: 200px;
+  }
+  .button3{
+    display: inline-block;
+    height: 50px;
+    padding: 0 10px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    background-color: #ccc;
+    color: white;
+    &:hover{
+      color: white;
+      text-decoration: none;
+    }
+  }
+  .button4{
+    //display: inline-block;
+    height: 50px;
+    padding: 0 10px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    background-color: #ccc;
+    color: white;
+    margin: 0;
+
+    &:hover{
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   protect_from_forgery :except => [:destroy]
-  before_action :set_tag
+  before_action :set_tag,except:[:done,:doing]
   before_action :set_task,only:[:edit]
   before_action :correct_user ,only:[:edit,:destroy]
 
@@ -8,6 +8,7 @@ class TasksController < ApplicationController
   def index    
     @tasks = @tag.tasks.includes(:user).order("deadline ASC")
     @tags = Tag.where(user_id: current_user.id)
+
   end
   
   def new
@@ -28,9 +29,26 @@ class TasksController < ApplicationController
     end
     
   end
+
+  def finish
+    @task = Task.find(params[:id])
+    if @task.completed.present?
+      @task.update_attribute(:completed, nil)
+      redirect_to tasks_done_path
+    else
+      @task.update_attribute(:completed, true)
+      redirect_to tag_tasks_path(@tag)
+    end
+  end
+
   def done
-    @task=Task.find(params[:tag_id])
-    @task.update(tag_id)
+    @done = Task.where(user_id: current_user.id,completed:1).order("deadline ASC")
+    @tags = Tag.where(user_id: current_user.id)
+  end
+
+  def doing
+    @done = Task.where(user_id: current_user.id,completed:nil).order("deadline ASC")
+    @tags = Tag.where(user_id: current_user.id)
   end
 
   def edit
@@ -45,8 +63,11 @@ class TasksController < ApplicationController
   def destroy
     task = Task.find(params[:id])
     task.destroy
-    redirect_to tag_tasks_path(@tag)
-    
+    if @task.completed.present?
+      redirect_to tasks_done_path
+    else
+      redirect_to tag_tasks_path(@tag)
+    end
   end
 
   private

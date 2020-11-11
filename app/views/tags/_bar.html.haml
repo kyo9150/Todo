@@ -14,6 +14,11 @@
     -# = link_to "#",class:"finish" do
     -#   %div 完了
     %ul.Tags
+      = link_to   tasks_done_path,class:"tag-done" do
+        %li.done 完了
+      = link_to   tasks_doing_path,class:"tag-doing" do
+        %li.doing 未完了
+        
       - @tags.each do |tags|
         %li.tag
           = link_to  tag_tasks_path(tags),method: :get,class:"tag-new" do

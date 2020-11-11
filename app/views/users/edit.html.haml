@@ -1,7 +1,6 @@
 .AccountPage
   .AccountPage__title
     %h2 アカウントの編集 
-    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button4'
     = link_to "トップページに戻る", :back, class: 'button3'
   .AccountPage__form
     = form_for(current_user) do |f|
@@ -21,4 +20,5 @@
         .FormField__input--normal
           = f.password_field :password,placeholder:"パスワード(英数字8文字以上)", autocomplete: "off"
       .actions
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button4'
         = f.submit "更新", class: 'button2 UserButton update'

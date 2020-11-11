@@ -61,11 +61,39 @@
       height: 50px;
       width: 96vw;
       display: flex;
-      margin-left: 10px;
+      // margin-left: 10px;
       align-items: center;
       overflow-x: auto;
       white-space: nowrap;
-      
+      .tag-done{
+        padding: 14px 10px 0 13px ;
+        border-right: 1px solid #EEEEEE;
+        height: 100%;
+        .done{
+          text-decoration: none;
+          color: #555555;
+          font-size: 17px;
+        }
+        &:hover{
+          text-decoration: none;
+          border-bottom: 2px solid	#3CB371;
+        }
+      }
+      .tag-doing{
+        padding: 14px 10px 0 10px ;
+        border-right: 1px solid #EEEEEE;
+        height: 100%;
+        .doing{
+          text-decoration: none;
+          color: #555555;
+          font-size: 17px;
+          border: none;
+        }
+        &:hover{
+          text-decoration: none;
+          border-bottom: 2px solid	#3CB371;
+        }
+      }
       .tag{
         border: 0;
         padding: 13px 12px 10px 0;
@@ -76,7 +104,6 @@
           text-decoration: none;
           color: #555555;
           font-size: 17px;
-          //font-weight: 100;
           border: 0px;
           padding: 13px 5px 10px 12px;
         }
@@ -122,20 +149,4 @@
 }
 .delete{
   color: white;
-}
-
-.finish{
-  display: block;
-  text-decoration: none;
-  color: #555555;
-  font-size: 20;
-  font-weight: 100;
-  padding: 15px 5px 5px 10px;
-  height: 50px;
-  width: 50px;
-  border: 0px;
-  &:hover{
-    border-bottom: 2px solid	#3CB371;
-    border-style: ridge;
-  }
 }
