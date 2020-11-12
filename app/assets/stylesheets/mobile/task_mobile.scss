@@ -72,19 +72,21 @@
         }
       }
       .content{
+        position: relative;
+        bottom: 13px;
         text-align: center;
         width: 340px;
         border-bottom: 1px solid #BBBBBB;
         ul{
-          margin-top: 10px;
+          margin-bottom: 10px;
           width: 340px;
           display: flex;
           justify-content: center;
           li{
+            margin-top: 10px;
             width: 200px;
-          };
+          }
         }
-  
         .button{
           font-size: 20px;
           text-align: center;
@@ -95,6 +97,10 @@
           .fa-chevron-down{
             position: relative;
             bottom: 10px;
+          }
+          .fa-chevron-up{
+            position: relative;
+            top: 0px;
           }
           &:hover{
             color: #BBBBBB;
