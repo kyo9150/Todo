@@ -121,6 +121,9 @@
         }
         
       }
+      ul.Tags li.selected {
+        background-color: red;
+      }
       
     }
 
@@ -149,4 +152,7 @@
 }
 .delete{
   color: white;
+}
+.selected {
+  background-color: red;
 }

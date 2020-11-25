@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
   get  "tasks/done"  => "tasks#done"
   get  "tasks/doing"  => "tasks#doing"
+  get  "tasks/calendar"  => "tasks#calendar"
 end

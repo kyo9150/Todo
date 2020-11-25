@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   protect_from_forgery :except => [:destroy]
-  before_action :set_tag,except:[:done,:doing]
+  before_action :set_tag,except:[:done,:doing,:calendar]
   before_action :set_task,only:[:edit]
   before_action :correct_user ,only:[:edit,:destroy]
 
@@ -51,8 +51,14 @@ class TasksController < ApplicationController
     @tags = Tag.where(user_id: current_user.id)
   end
 
+  def calendar
+    @tags = Tag.where(user_id: current_user.id)
+    @tasks = Task.where(user_id: current_user.id)
+  end
+
   def edit
   end
+
   def update
     task=Task.find(params[:id])
     task.update(task_params)

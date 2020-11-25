@@ -7,8 +7,10 @@
 @import "modules/tags";
 @import "modules/new-tag";
 @import "modules/new-task";
+@import "modules/calendar";
+
 @import "mobile/task_mobile";
 @import "mobile/new_mobile";
 @import "mobile/user_mobile";
 @import "bootstrap-sprockets";
-@import "bootstrap";
+@import "fullcalendar"
