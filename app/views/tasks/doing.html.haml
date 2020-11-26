@@ -2,8 +2,6 @@
   = render "tags/bar" 
   .Contents
     .Contents__Tasks
-      = link_to tasks_calendar_path,class:"calendar" do
-        =icon('far','calendar-alt')
       - @done.each do |task|
         - if current_user.id == task.user_id
           .list
